@@ -2,7 +2,7 @@
 
 ## Product
 
-OpenSource Navigator turns a public GitHub repository and a developer’s skills into an evidence-led contribution path: realistic issue opportunities, likely code locations, concepts, tests, rules, and blockers. It does not generate PRs or make acceptance promises.
+ContribPath turns a public GitHub repository and a developer’s skills into an evidence-led contribution path: realistic issue opportunities, likely code locations, concepts, tests, rules, and blockers. It does not generate PRs or make acceptance promises.
 
 ## Target users
 

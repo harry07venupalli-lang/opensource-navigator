@@ -1,6 +1,6 @@
-# OpenSource Navigator
+# ContribPath
 
-**Find where you can actually contribute.** OpenSource Navigator analyzes a public GitHub repository against a developer’s current skills and produces an evidence-led path from issue → codebase → tests → contribution.
+**Find where you can actually contribute.** ContribPath analyzes a public GitHub repository against a developer’s current skills and produces an evidence-led path from issue → codebase → tests → contribution.
 
 It is not a PR generator. It never submits PRs or comments, impersonates contributors, executes repository code, or presents AI-generated claims as GitHub facts.
 
