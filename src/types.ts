@@ -1,0 +1,9 @@
+export type Experience = 'Beginner' | 'Intermediate' | 'Advanced';
+export type RepoRef = { owner: string; repo: string; issueNumber?: number };
+export type GitHubRepo = { full_name: string; name: string; description: string | null; html_url: string; stargazers_count: number; forks_count: number; open_issues_count: number; updated_at: string; default_branch: string; license: { spdx_id: string } | null; archived: boolean; owner: { login: string }; };
+export type GitHubIssue = { number: number; title: string; html_url: string; labels: Array<{ name: string; color: string }>; state: string; updated_at: string; comments: number; body: string | null; assignees: unknown[]; pull_request?: unknown };
+export type RepoFile = { path: string; type: string; size?: number };
+export type RepoContext = { repo: GitHubRepo; languages: Record<string, number>; issues: GitHubIssue[]; files: RepoFile[]; readme: string; contributing: string; recentCommitDate?: string; rateRemaining?: number };
+export type Recommendation = { issue: GitHubIssue; fit: 'Strong fit' | 'Reasonable fit' | 'Stretch'; difficulty: 'Low' | 'Medium' | 'High'; confidence: 'High' | 'Moderate' | 'Limited'; reasons: string[]; gaps: string[]; blockers: string[]; relevantFiles: RepoFile[]; concepts: string[]; score: number };
+export type ContributionRules = { setup: string[]; testing: string[]; workflow: string[] };
+export type Analysis = { context: RepoContext; skills: string[]; stack: string[]; health: { label: 'Active' | 'Moderate' | 'Low'; evidence: string[] }; fit: { label: 'Strong fit' | 'Reasonable fit' | 'Stretch' | 'Poor fit'; reasons: string[]; gaps: string[] }; recommendations: Recommendation[]; rules: ContributionRules };
